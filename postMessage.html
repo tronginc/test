@@ -7,9 +7,40 @@
     <title>Document</title>
 </head>
 <script>
+    function clickMe1() {
+        window.ReactNativeWebView.postMessage(JSON.stringify({
+            cmd: 'SHOW_INPUT',
+            value: {
+
+            }
+        }));
+    }
+
     function clickMe2() {
         window.ReactNativeWebView.postMessage(JSON.stringify({
-            cmd: 'SHOW_INPUT'
+            cmd: 'SHOW_INPUT',
+            value: {
+                image: true
+            }
+        }));
+    }
+
+    function clickMe3() {
+        window.ReactNativeWebView.postMessage(JSON.stringify({
+            cmd: 'SHOW_INPUT',
+            value: {
+                file: true
+            }
+        }));
+    }
+
+    function clickMe4() {
+        window.ReactNativeWebView.postMessage(JSON.stringify({
+            cmd: 'SHOW_INPUT',
+            value: {
+                file: true,
+                image: true
+            }
         }));
     }
 
@@ -22,21 +53,21 @@
 </script>
 
 <body>
-    <button onclick="clickMe2()" style="margin: 50px">Show</button>
+    <button onclick="clickMe1()" style="margin: 50px">Show Only Input</button>
     <hr />
-    <button onclick="clickMe2()" style="margin: 50px">Show</button>
+    <button onclick="clickMe2()" style="margin: 50px">Allow Attach Image</button>
     <hr />
-    <button onclick="clickMe2()" style="margin: 50px">Show</button>
+    <button onclick="clickMe3()" style="margin: 50px">Allow Attach File</button>
     <hr />
-    <button onclick="clickMe2()" style="margin: 50px">Show</button>
+    <button onclick="clickMe4()" style="margin: 50px">Allow Attach All</button>
     <hr />
-    <button onclick="clickMe2()" style="margin: 50px">Show</button>
+    <button onclick="clickMe1()" style="margin: 50px">Show Only Input</button>
     <hr />
-    <button onclick="clickMe2()" style="margin: 50px">Show</button>
+    <button onclick="clickMe2()" style="margin: 50px">Allow Attach Image</button>
     <hr />
-    <button onclick="clickMe2()" style="margin: 50px">Show</button>
+    <button onclick="clickMe3()" style="margin: 50px">Allow Attach File</button>
     <hr />
-    <button onclick="clickMe2()" style="margin: 50px">Show</button>
+    <button onclick="clickMe4()" style="margin: 50px">Allow Attach All</button>
     <hr />
 </body>
 
