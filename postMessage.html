@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+</head>
+<script>
+    function clickMe2() {
+        window.ReactNativeWebView.postMessage(JSON.stringify({
+            cmd: 'SHOW_INPUT'
+        }));
+    }
+
+    function iInput(data) {
+        const img = document.createElement('img');
+        img.src = data.uri;
+        alert(data.uri)
+        document.body.appendChild(img);
+    }
+</script>
+
+<body>
+    <button onclick="clickMe2()" style="margin: 50px">Show</button>
+</body>
+
+
+</html>
